@@ -27,6 +27,7 @@ Route::resource('route', 'routeController')->middleware('auth');
 Route::resource('history', 'historyController')->middleware('auth');
 Route::resource('transaction', 'transactionController')->middleware('auth');
 Route::resource('bill', 'billController')->middleware('auth');
+Route::resource('person', 'PersonController')->middleware('auth');
 
 Route::prefix('supervisor')->group(function () {
     Route::resource('agent', 'agentController');

@@ -15,7 +15,7 @@ class PersonController extends Controller
     public function index()
     {
         $people = Person::all();
-        return view('person.index', compact('peole'));
+        return view('person.index', compact('people'));
     }
 
     /**
@@ -36,7 +36,8 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Person::create($request->all());
+        return redirect()->route('person.index');
     }
 
     /**
