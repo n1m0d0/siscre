@@ -33,9 +33,11 @@
     </script>
 </head>
 
-<body class="theme-primary menubar-light pace-done menubar-top">
+<body class="menubar-left menubar-unfold menubar-light theme-primary">
 <!--============= start main area -->
 @include('layout.navbar')
+
+@include('layout.appside')
 
 @include('layout.navbarsearch')
 
