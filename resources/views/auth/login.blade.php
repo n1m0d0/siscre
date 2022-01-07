@@ -72,23 +72,7 @@
                 </div>
             </form>
         </div>
-        <form class="d-none" action="#">
-            <div class="form-group">
-                <input id="sign-in-email" type="email" class="form-control" placeholder="Email">
-            </div>
-
-            <div class="form-group">
-                <input id="sign-in-password" type="password" class="form-control" placeholder="Password">
-            </div>
-
-            <div class="form-group m-b-xl">
-                <div class="checkbox checkbox-primary">
-                    <input type="checkbox" id="keep_me_logged_in"/>
-                    <label for="keep_me_logged_in">Mantener sesion</label>
-                </div>
-            </div>
-            <input type="submit" class="btn btn-primary" value="SING IN">
-        </form>
+        
     </div><!-- #login-form -->
 
     <div class="simple-page-footer">
