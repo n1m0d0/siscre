@@ -57,8 +57,34 @@
                                         <label>Fecha de Nacimiento:</label>
                                         <input type="date" name="date_of_birth" class="form-control">
                                     </div>
+                                    <div class="form-group">
+                                        <label>Lugar de nacimiento:</label>
+                                        <input type="text" name="place_of_birth" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Direccion:</label>
+                                        <input type="text" name="address" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Departamento:</label>
+                                        <input type="text" name="department" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>telefono:</label>
+                                        <input type="text" name="telephone" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Celular:</label>
+                                        <input type="text" name="cellphone" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>correo:</label>
+                                        <input type="text" name="email" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-success btn-block btn-md">Guardar</button>
+                                    </div>
                                 </form>
-
                             </div><!-- .widget-body -->
                         </div><!-- .widget -->
                     </div><!-- END column -->
