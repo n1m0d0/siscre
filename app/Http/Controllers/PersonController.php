@@ -36,6 +36,22 @@ class PersonController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'second_name' => 'required',
+            'surname' => 'required',
+            'second_surname' => 'required',
+            'identification_document' => 'required',
+            'extension' => 'required',
+            'date_of_birth' => 'required',
+            'place_of_birth' => 'required',
+            'address' => 'required',
+            'department' => 'required',            
+            'city' => 'required',            
+            'telephone' => 'required',            
+            'cellphone' => 'required',
+            'email' => 'required',
+        ]);
         Person::create($request->all());
         return redirect()->route('person.index');
     }

@@ -11,6 +11,15 @@
                             <header class="widget-header">
                                 <h4 class="widget-title">Registro de Persona</h4>
                             </header><!-- .widget-header -->
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <hr class="widget-separator">
                             <div class="widget-body">
                                 <form method="POST" action="{{ route('person.store') }}" enctype="multipart/form-data">

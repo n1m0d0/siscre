@@ -11,12 +11,22 @@
                             <header class="widget-header">
                                 <h4 class="widget-title">Registro de Empresa</h4>
                             </header><!-- .widget-header -->
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <hr class="widget-separator">
                             <div class="widget-body">
                                 <form method="POST" action="{{ route('business.store') }}" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <div class="form-group invisible">
-                                        <input type="text" name="person_id" class="form-control" value="{{ $person->id }}">
+                                        <input type="text" name="person_id" class="form-control"
+                                            value="{{ $person->id }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Nombre de la Empresa:</label>
