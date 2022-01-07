@@ -32,6 +32,12 @@
                                             <td>{{ $person->telephone }}</td>
                                             <td>{{ $person->cellphone }}</td>
                                             <td>
+                                                @if ($person->business != null)
+
+                                                @else
+                                                    <a href="{{ route('business.create', $person->id) }}"
+                                                        class="btn btn-primary">Datos Laborales</a>
+                                                @endif
 
                                             </td>
                                         </tr>

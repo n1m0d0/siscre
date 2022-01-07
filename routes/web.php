@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BusinessController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,8 +29,12 @@ Route::resource('route', 'routeController')->middleware('auth');
 Route::resource('history', 'historyController')->middleware('auth');
 Route::resource('transaction', 'transactionController')->middleware('auth');
 Route::resource('bill', 'billController')->middleware('auth');
+/* nuestro */
 Route::resource('person', 'PersonController')->middleware('auth');
+Route::get('business/create/{id}', [BusinessController::class, 'create'])->name('business.create')->middleware('auth');
+Route::post('business/store/', [BusinessController::class, 'store'])->name('business.store')->middleware('auth');
 
+/* */
 Route::prefix('supervisor')->group(function () {
     Route::resource('agent', 'agentController');
     Route::resource('close', 'closeController');

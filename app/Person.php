@@ -23,4 +23,9 @@ class Person extends Model
         'cellphone',
         'email'
     ];
+
+    public function business()
+    {
+        return $this->hasOne(Business::class);
+    }
 }
