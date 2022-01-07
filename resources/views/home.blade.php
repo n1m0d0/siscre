@@ -46,7 +46,7 @@
 
 @section('agent-section')
     <div class="col-md-3 col-sm-6">
-        <a href="{{url('client/create')}}">
+        <a href="{{ route('person.index') }}">
             <div class="widget stats-widget">
                 <div class="widget-body clearfix bg-warning">
                     <div class="pull-left">
